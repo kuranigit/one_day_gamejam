@@ -7,8 +7,9 @@ public class GManager : MonoBehaviour
     public static GManager instance = null;
     public int chargeHave = 0;
     public int life = 10;
-    public float time = 60;
+    public float time = 30;
     public bool disappearFlag = false;
+    public float disppearTime = 5;
 
     private void Awake()
     {

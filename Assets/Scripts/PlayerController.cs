@@ -12,8 +12,7 @@ public class PlayerController : MonoBehaviour
     private Renderer playerAlbedo;
     private Rigidbody playerRb;
     private bool jumpFlag;
-    private float currentTime = 0;
-    private float disppearTime = 5;
+    public float currentTime = 0;
 
     void Start()
     {
@@ -64,7 +63,7 @@ public class PlayerController : MonoBehaviour
         {
             currentTime += Time.deltaTime;
         }
-        if(currentTime > disppearTime)
+        if(currentTime > GManager.instance.disppearTime)
         {
             GManager.instance.disappearFlag = false;
             playerAlbedo.material.SetColor("_Color", usuallyColor);
